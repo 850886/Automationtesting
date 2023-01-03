@@ -1,4 +1,4 @@
-package com.Browser;
+package com.dateofbirthcalculator;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class browser {
+public class DateOfBirthCalculator {
 	
 	 
 
@@ -31,8 +31,8 @@ public class browser {
 		
 		driver.manage().window().maximize();
 		
-        JavascriptExecutor js = (JavascriptExecutor)driver;  
-        js.executeScript("scrollBy(0, 1000)");   
+        //JavascriptExecutor js = (JavascriptExecutor)driver;  
+        //js.executeScript("scrollBy(0, 1000)");   
         
         Select objSelect =new Select(driver.findElement(By.id("today_Month_ID")));
          
