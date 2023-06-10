@@ -16,11 +16,11 @@ import org.openqa.selenium.support.ui.Select;
 
 
 public class DateOfBirthCalculator {
-	
+	protected static WebDriver driver;
+
 	 
 
 	public static void main(String[] args) throws InterruptedException, IOException {
-		WebDriver driver;
 		// TODO Auto-generated method stub
 		String path=System.getProperty("user.dir")+"/driver/chromedriver";
 		System.setProperty("webdriver.chrome.driver",path);
