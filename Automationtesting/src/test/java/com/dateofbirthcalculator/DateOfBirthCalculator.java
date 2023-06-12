@@ -2,32 +2,46 @@ package com.dateofbirthcalculator;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class DateOfBirthCalculator {
-	protected static WebDriver driver;
 
-	 
+public class DateOfBirthCalculator{
+	public static WebDriver driver;
 
-	public static void main(String[] args) throws InterruptedException, IOException {
-		// TODO Auto-generated method stub
+	public static void driverpath() {
+		
 		String path=System.getProperty("user.dir")+"/driver/chromedriver";
 		System.setProperty("webdriver.chrome.driver",path);
+		
+		ChromeOptions option =new ChromeOptions();
+		option.addArguments("--remote-allow-origins=*");
 
-		driver=new ChromeDriver();
+		driver=new ChromeDriver(option);
+
+	}
+	@SuppressWarnings("deprecation")
+	public static void DateofBirth() {
+		// TODO Auto-generated method stub
+		
+		//ChromeOptions option =new ChromeOptions();
+		//option.addArguments("--remote-allow-origins=*");
+
 		
 		driver.get("https://www.calculator.net/age-calculator.html");
+		
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		
 		driver.manage().window().maximize();
 		
@@ -55,9 +69,14 @@ public class DateOfBirthCalculator {
     File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
     String filepath=System.getProperty("user.dir")+"//screenshot//test"+".png";
     File Dest=new File(filepath);
-    FileUtils.copyFile(SrcFile, Dest);
+    try {
+		FileUtils.copyFile(SrcFile, Dest);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
-    System.out.println("test pass");
+   // System.out.println("test pass");
     
       
         
