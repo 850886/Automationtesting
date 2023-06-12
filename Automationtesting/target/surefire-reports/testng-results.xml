@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-13T00:29:15 IST" name="com.testng.NewTest" finished-at="2023-06-13T00:29:57 IST" duration-ms="42091">
+    <groups>
+    </groups>
+    <test started-at="2023-06-13T00:29:15 IST" name="Command line test" finished-at="2023-06-13T00:29:57 IST" duration-ms="42091">
+      <class name="com.testng.NewTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.testng.NewTest@7bc1a03d]" started-at="2023-06-13T00:29:15 IST" name="beforeTest" finished-at="2023-06-13T00:29:22 IST" duration-ms="7626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="Auto1()[pri:0, instance:com.testng.NewTest@7bc1a03d]" started-at="2023-06-13T00:29:22 IST" name="Auto1" finished-at="2023-06-13T00:29:36 IST" duration-ms="13711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Auto1 -->
+        <test-method signature="Auto2()[pri:1, instance:com.testng.NewTest@7bc1a03d]" started-at="2023-06-13T00:29:36 IST" name="Auto2" finished-at="2023-06-13T00:29:56 IST" duration-ms="20501" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Auto2 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.testng.NewTest@7bc1a03d]" started-at="2023-06-13T00:29:56 IST" name="afterTest" finished-at="2023-06-13T00:29:57 IST" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.testng.NewTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.testng.NewTest -->
+</testng-results>
